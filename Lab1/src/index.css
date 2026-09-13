@@ -1,0 +1,28 @@
+:root {
+  --bg: #ffffff;
+  --panel: #ffffff;
+  --panel-alt: #f8f9fa;
+  --border: #e2e8f0;
+  --text: #1a202c;
+  --text-muted: #718096;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: system-ui, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
