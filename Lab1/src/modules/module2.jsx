@@ -46,7 +46,7 @@ class Module2Dialog extends React.Component {
           </div>
           <div className="m2-actions">
             <button type="button" className="m2-btn" onClick={this.handleExit}>
-              Вихід
+              Exit
             </button>
             <button
               type="button"
@@ -54,7 +54,7 @@ class Module2Dialog extends React.Component {
               onClick={this.handleConfirm}
               disabled={!text.trim()}
             >
-              Так
+              Yes
             </button>
           </div>
         </div>
