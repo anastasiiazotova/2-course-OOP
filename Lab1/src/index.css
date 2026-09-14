@@ -31,3 +31,58 @@ button,
 input {
   font-family: inherit;
 }
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.menubar {
+  display: flex;
+  gap: 8px;
+  background: var(--panel);
+  border-bottom: 1px solid var(--border);
+  padding: 10px 16px;
+}
+
+.menu-item {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 8px 18px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.menu-item:hover {
+  background: var(--panel-alt);
+  border-color: #cbd5e0;
+}
+
+.workspace {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+.output-panel {
+  width: 100%;
+  max-width: 500px;
+}
+
+.output {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 20px;
+  min-height: 100px;
+  font-family: monospace;
+  font-size: 0.9rem;
+  color: var(--text);
+  white-space: pre-wrap;
+}
