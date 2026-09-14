@@ -1,6 +1,8 @@
 import React from "react";
+import { createRoot } from "react-dom/client";
+import "../index.css";
 
-export class Module2Dialog extends React.Component {
+class Module2Dialog extends React.Component {
   constructor(props) {
     super(props);
     this.state = { text: "" };
@@ -48,7 +50,7 @@ export class Module2Dialog extends React.Component {
             </button>
             <button
               type="button"
-              className="m2-btn m1-btn-primary"
+              className="m2-btn m2-btn-primary"
               onClick={this.handleConfirm}
               disabled={!text.trim()}
             >
@@ -59,4 +61,20 @@ export class Module2Dialog extends React.Component {
       </div>
     );
   }
+}
+
+export function inputDialog(container) {
+  return new Promise((resolve) => {
+    const host = document.createElement("div");
+    container.appendChild(host);
+    const root = createRoot(host);
+
+    const close = (result) => {
+      root.unmount();
+      container.removeChild(host);
+      resolve(result);
+    };
+
+    root.render(<Module2Dialog onClose={close} />);
+  });
 }
